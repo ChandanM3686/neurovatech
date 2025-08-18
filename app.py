@@ -162,7 +162,7 @@ def _get_retell_api_key() -> str:
         return st.secrets["RETELL_API_KEY"]
     except Exception:
         # Built-in default key (requested to be hardcoded)
-        return "key_c4c91d9723a5cdeb2c14f9b18919"
+        return "key_b9e3efe1284357447c6beb490fe6"
 
 if "agents_override" not in st.session_state:
     st.session_state.agents_override = {}
@@ -173,18 +173,8 @@ def get_retell_client() -> Retell:
 # ------------- Agents (merged: your Flask + Dental) -------------
 AGENTS = {
     # From your Flask app
-    "real_estate": "agent_47bcafb59b39c5e0a488edf4d9",
-    "debits": "agent_b1329cafcfb061e2bad5e7ee6f",
-    "insurance": "agent_49db8c2060bf33531273213e05",
-    "healthcare": "agent_cdd1db6ff8c3fcbbb7e624d82f",
-    "school": "agent_42244218fe2434b394823229f3",
-    "ecommerce": "agent_6f60a841012f3b6caa758cced7",
-    "travel": "agent_90bbd9f42b1e8991c6354f2d18",
-    "fintech": "agent_c3d2c3598247fc9c9f876a842c",
-    "utility": "agent_ae0cbbbc5847928a53c9fc7ca3",
-    "restaurant": "agent_085d0c296fb0aa4c4623faff24",
-    # From your Streamlit snippet
-    "dental": "agent_4deac7a40e9e59967e58066b88",
+    "real_estate": "agent_6cd1502afd9b2cadde62c52649",
+    "restaurant": "agent_23704d3a605d470f7c54a4bc0f",
 }
 
 # ------------- Helpers -------------
@@ -211,102 +201,7 @@ AGENT_INFO = {
             "Offer & closing guidance",
         ],
     },
-    "debits": {
-        "icon": "🏦",
-        "title": "Debits Assistant",
-        "description": "Billing, payment support, and account adjustments with secure verification.",
-        "features": [
-            "Explain charges & statements",
-            "Update or pause payments",
-            "Set up autopay & reminders",
-            "Refund & dispute guidance",
-            "Secure identity verification",
-        ],
-    },
-    "insurance": {
-        "icon": "🛡️",
-        "title": "Insurance Assistant",
-        "description": "Policy explanations, quotes, and claims status across multiple lines.",
-        "features": [
-            "Auto/Home/Health/Life quotes",
-            "Coverage & deductible info",
-            "File & track claims",
-            "Find in-network providers",
-            "Renewal reminders",
-        ],
-    },
-    "healthcare": {
-        "icon": "🏥",
-        "title": "Healthcare Assistant",
-        "description": "Appointment booking, provider lookup, and pre-visit instructions.",
-        "features": [
-            "Book & reschedule appointments",
-            "Check insurance acceptance",
-            "Provider availability",
-            "Pre-visit preparation",
-            "Follow-up reminders",
-        ],
-    },
-    "school": {
-        "icon": "🎓",
-        "title": "School Assistant",
-        "description": "Admissions help, course info, schedule & event reminders.",
-        "features": [
-            "Admissions & deadlines",
-            "Course & curriculum info",
-            "Campus tour scheduling",
-            "Event & exam reminders",
-            "Financial aid basics",
-        ],
-    },
-    "ecommerce": {
-        "icon": "🛒",
-        "title": "E-commerce Assistant",
-        "description": "Order status, returns, recommendations, and support.",
-        "features": [
-            "Track order & delivery",
-            "Returns & exchanges",
-            "Product Q&A",
-            "Personalized recommendations",
-            "Promo & stock updates",
-        ],
-    },
-    "travel": {
-        "icon": "✈️",
-        "title": "Travel Assistant",
-        "description": "Flights, hotels, itinerary changes, and local tips.",
-        "features": [
-            "Book flights & hotels",
-            "Change or cancel trips",
-            "Visa & baggage info",
-            "Local transport tips",
-            "Real-time alerts",
-        ],
-    },
-    "fintech": {
-        "icon": "💳",
-        "title": "Fintech Assistant",
-        "description": "Account support, transfers, security, and insights.",
-        "features": [
-            "Balance & transaction info",
-            "Transfers & bill pay",
-            "Card lock/unlock",
-            "Fraud alerts & security",
-            "Spending insights",
-        ],
-    },
-    "utility": {
-        "icon": "⚡",
-        "title": "Utility Assistant",
-        "description": "Outages, billing, usage, and service appointments.",
-        "features": [
-            "Report & track outages",
-            "Billing & autopay",
-            "Usage analytics",
-            "Move-in/move-out service",
-            "Technician scheduling",
-        ],
-    },
+    
     "restaurant": {
         "icon": "🍽️",
         "title": "Restaurant Assistant",
@@ -319,18 +214,7 @@ AGENT_INFO = {
             "Event & group planning",
         ],
     },
-    "dental": {
-        "icon": "🦷",
-        "title": "Dental Assistant",
-        "description": "Scheduling, procedure info, and oral health guidance.",
-        "features": [
-            "Book dental appointments",
-            "Procedure explanations",
-            "Insurance & coverage basics",
-            "Post-op care guidance",
-            "Emergency triage tips",
-        ],
-    },
+    
 }
 
 # ------------- Sidebar: Settings (agent IDs only) -------------
